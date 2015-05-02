@@ -32,9 +32,7 @@
 }
 
 - (void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
-//    ProfileViewController *pvc = [[ProfileViewController alloc] init];
-//    [self presentModalViewController:pvc animated:YES];
-
+//   open my profile if user fb info recieved
     [self performSegueWithIdentifier:@"openMyProfile" sender:self];
 }
 
