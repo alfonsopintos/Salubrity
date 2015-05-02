@@ -11,6 +11,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "ProfileViewController.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -21,6 +22,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [FBLoginView class];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"ye9rhnCo5jyvk86O7iCYHOGTaNbSvfyMpzMSSuTK"
+                  clientKey:@"ZzNdXGhNLGUIYSyGOR9pM70jutbQH2iGb9HhRYaE"];
+    
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                     didFinishLaunchingWithOptions:launchOptions];
     return YES;

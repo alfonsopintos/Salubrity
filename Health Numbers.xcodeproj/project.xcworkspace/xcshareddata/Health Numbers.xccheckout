@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8070446D-B16A-49FD-B57D-0014680278C9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Health Numbers</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3BDF9A76B7E4BF18A0EC35EDD6AC0C26B3CF7CDC</key>
+		<string>github.com:alfonsopintos/Salubrity.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Health Numbers.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3BDF9A76B7E4BF18A0EC35EDD6AC0C26B3CF7CDC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:alfonsopintos/Salubrity.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3BDF9A76B7E4BF18A0EC35EDD6AC0C26B3CF7CDC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3BDF9A76B7E4BF18A0EC35EDD6AC0C26B3CF7CDC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Health%20Numbers</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -10,7 +10,7 @@
 
 
 @interface ViewController ()
-
+    @property(nonatomic) NSDictionary *userProfile;
 @end
 
 @implementation ViewController
@@ -33,11 +33,27 @@
 
 - (void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
 //   open my profile if user fb info recieved
+    self.userProfile = @{
+                         @"first_name":[user objectForKey:@"first_name"],
+                         @"facebook_id":[user objectForKey:@"id"]
+                         };
     [self performSegueWithIdentifier:@"openMyProfile" sender:self];
 }
 
+
+// This will get called too before the view appears
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"openMyProfile"]) {
+        // Get destination view
+        ProfileViewController *vc = [segue destinationViewController];
+        vc.userProfile = self.userProfile;
+        
+    }
+}
+
+
 - (void) loginViewShowingLoggedInUser:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
-    NSLog(@"user signed in");
 }
 
 
