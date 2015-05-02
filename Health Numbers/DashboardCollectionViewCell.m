@@ -1,13 +1,13 @@
 //
-//  DashboardViewController.h
+//  DashboardCollectionViewCell.m
 //  Health Numbers
 //
 //  Created by Alfonso Pintos on 5/2/15.
 //  Copyright (c) 2015 Meme Menu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DashboardCollectionViewCell.h"
 
-@interface DashboardViewController : UIViewController
+@implementation DashboardCollectionViewCell
 
 @end

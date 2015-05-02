@@ -31,7 +31,8 @@
 		BEFD3BFC1AF5308000167882 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFD3BFB1AF5308000167882 /* SystemConfiguration.framework */; };
 		BEFD3BFE1AF5308A00167882 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFD3BFD1AF5308A00167882 /* libz.dylib */; };
 		BEFD3C001AF5309500167882 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFD3BFF1AF5309500167882 /* libsqlite3.dylib */; };
-		BEFD3C031AF54FC400167882 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFD3C021AF54FC400167882 /* DashboardViewController.m */; };
+		BEFD3C061AF55F5100167882 /* DashboardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFD3C051AF55F5100167882 /* DashboardCollectionViewController.m */; };
+		BEFD3C091AF5676500167882 /* DashboardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFD3C081AF5676500167882 /* DashboardCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +77,10 @@
 		BEFD3BFB1AF5308000167882 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BEFD3BFD1AF5308A00167882 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BEFD3BFF1AF5309500167882 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		BEFD3C011AF54FC400167882 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
-		BEFD3C021AF54FC400167882 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		BEFD3C041AF55F5100167882 /* DashboardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardCollectionViewController.h; sourceTree = "<group>"; };
+		BEFD3C051AF55F5100167882 /* DashboardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardCollectionViewController.m; sourceTree = "<group>"; };
+		BEFD3C071AF5676500167882 /* DashboardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardCollectionViewCell.h; sourceTree = "<group>"; };
+		BEFD3C081AF5676500167882 /* DashboardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,15 +139,11 @@
 		BEB2CF801AF5021600900545 /* Health Numbers */ = {
 			isa = PBXGroup;
 			children = (
+				BEB2CF8B1AF5021600900545 /* Main.storyboard */,
+				BEFD3C0A1AF56E2B00167882 /* Views */,
 				BEB2CF851AF5021600900545 /* AppDelegate.h */,
 				BEB2CF861AF5021600900545 /* AppDelegate.m */,
-				BEB2CF881AF5021600900545 /* ViewController.h */,
-				BEB2CF891AF5021600900545 /* ViewController.m */,
-				BEFD3C011AF54FC400167882 /* DashboardViewController.h */,
-				BEFD3C021AF54FC400167882 /* DashboardViewController.m */,
-				BEB2CF8B1AF5021600900545 /* Main.storyboard */,
-				BEB2CFB01AF50CC800900545 /* ProfileViewController.h */,
-				BEB2CFB11AF50CC800900545 /* ProfileViewController.m */,
+				BEFD3C0B1AF56E3700167882 /* Controllers */,
 				BEB2CF8E1AF5021600900545 /* Images.xcassets */,
 				BEB2CF901AF5021600900545 /* LaunchScreen.xib */,
 				BEB2CF811AF5021600900545 /* Supporting Files */,
@@ -199,6 +198,28 @@
 				BEB2CFA71AF5048800900545 /* FBSDKCoreKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEFD3C0A1AF56E2B00167882 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEFD3C071AF5676500167882 /* DashboardCollectionViewCell.h */,
+				BEFD3C081AF5676500167882 /* DashboardCollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BEFD3C0B1AF56E3700167882 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEB2CF881AF5021600900545 /* ViewController.h */,
+				BEB2CF891AF5021600900545 /* ViewController.m */,
+				BEFD3C041AF55F5100167882 /* DashboardCollectionViewController.h */,
+				BEFD3C051AF55F5100167882 /* DashboardCollectionViewController.m */,
+				BEB2CFB01AF50CC800900545 /* ProfileViewController.h */,
+				BEB2CFB11AF50CC800900545 /* ProfileViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,9 +322,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEFD3C031AF54FC400167882 /* DashboardViewController.m in Sources */,
 				BEB2CF8A1AF5021600900545 /* ViewController.m in Sources */,
+				BEFD3C091AF5676500167882 /* DashboardCollectionViewCell.m in Sources */,
 				BEB2CF871AF5021600900545 /* AppDelegate.m in Sources */,
+				BEFD3C061AF55F5100167882 /* DashboardCollectionViewController.m in Sources */,
 				BEB2CFB21AF50CC800900545 /* ProfileViewController.m in Sources */,
 				BEB2CF841AF5021600900545 /* main.m in Sources */,
 			);

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import "DashboardViewController.h"
+#import "DashboardCollectionViewController.h"
 
 @interface ProfileViewController : UIViewController
 

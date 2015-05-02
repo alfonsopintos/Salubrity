@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "ProfileViewController.h"
-#import "DashboardViewController.h"
+#import "DashboardCollectionViewController.h"
 
 @interface ViewController : UIViewController <FBLoginViewDelegate>
 

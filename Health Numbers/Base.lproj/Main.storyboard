@@ -254,29 +254,83 @@
             </objects>
             <point key="canvasLocation" x="2498.5" y="1359.5"/>
         </scene>
-        <!--Dashboard-->
-        <scene sceneID="9Ce-PZ-Qfs">
+        <!--View Controller-->
+        <scene sceneID="V83-Qs-67O">
             <objects>
-                <viewController id="M7R-H1-VEE" customClass="DashboardViewController" sceneMemberID="viewController">
+                <viewController id="9YL-Ae-RAY" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oag-Xo-L1e"/>
-                        <viewControllerLayoutGuide type="bottom" id="xLa-n3-ZFs"/>
+                        <viewControllerLayoutGuide type="top" id="ick-PQ-jlp"/>
+                        <viewControllerLayoutGuide type="bottom" id="fXj-N8-6rP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lyU-7B-QsT">
+                    <view key="view" contentMode="scaleToFill" id="AWY-v5-Rzy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank you for signing up, here is your dashboard" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFF-Io-EBC">
-                                <rect key="frame" x="16" y="52" width="343" height="165"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVI-u7-hwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2487.5" y="-1124.5"/>
+        </scene>
+        <!--Dashboard Collection View-->
+        <scene sceneID="9Ce-PZ-Qfs">
+            <objects>
+                <viewController id="M7R-H1-VEE" userLabel="Dashboard Collection View" customClass="DashboardCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="TgZ-AY-WiH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="0.0" id="BBZ-qQ-CPF">
+                            <size key="itemSize" width="186" height="186"/>
+                            <size key="headerReferenceSize" width="0.0" height="20"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dashboardCell" id="oRO-3Z-bQB" customClass="DashboardCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="186" height="186"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HPV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTs-6X-SDJ">
+                                            <rect key="frame" x="58" y="92" width="70" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycd-tf-TN0">
+                                            <rect key="frame" x="58" y="42" width="70" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.64313725489999995" green="0.80392156859999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="cellNumberLabel" destination="ycd-tf-TN0" id="Agm-FE-FtI"/>
+                                    <outlet property="cellTextLabel" destination="nTs-6X-SDJ" id="xcH-kJ-dkG"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GxD-3I-Z1A">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="M7R-H1-VEE" id="cIG-OZ-Sa6"/>
+                            <outlet property="delegate" destination="M7R-H1-VEE" id="5de-8H-LqN"/>
+                        </connections>
+                    </collectionView>
                     <tabBarItem key="tabBarItem" title="Dashboard" id="Uhd-ej-kjv"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="dashboardCollectionView" destination="TgZ-AY-WiH" id="u9K-1O-6jP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87A-qU-dC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,6 +358,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AbY-Uz-3uK"/>
+        <segue reference="s6b-Jp-FDY"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -71,7 +71,7 @@
         ProfileViewController *vc = [segue destinationViewController];
         vc.userProfile = self.userProfile;
     } else if ([[segue identifier] isEqualToString:@"openDashboard"]) {
-        DashboardViewController *dvc = [segue destinationViewController];
+        DashboardCollectionViewController *dvc = [segue destinationViewController];
     }
 }
 
