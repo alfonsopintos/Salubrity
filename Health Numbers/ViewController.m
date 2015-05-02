@@ -33,6 +33,7 @@
 
 - (void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
 //   open my profile if user fb info recieved
+//    place if/else block here, query parse for facebook_id, if the same, skip segue, otherwise segue to show profile
     self.userProfile = @{
                          @"first_name":[user objectForKey:@"first_name"],
                          @"facebook_id":[user objectForKey:@"id"]

@@ -116,6 +116,12 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="anonymousSwitch" destination="GSJ-9R-WjH" id="zQK-GG-Jfy"/>
+                        <outlet property="chlamydiaSwitch" destination="10S-GF-4WA" id="axc-pp-6Fq"/>
+                        <outlet property="gonorrheaSwitch" destination="Z6R-Xo-42m" id="hBF-FD-nzq"/>
+                        <outlet property="hivSwitch" destination="ljp-xV-lky" id="fkp-nf-Vkv"/>
+                        <outlet property="hpvSwitch" destination="NOP-au-Q2P" id="00b-sT-TuX"/>
+                        <outlet property="otherSwitch" destination="uUL-xJ-kec" id="EJ4-3C-8Fg"/>
                         <outlet property="submitButton" destination="WUN-UE-IPg" id="LJl-3V-bzL"/>
                     </connections>
                 </viewController>

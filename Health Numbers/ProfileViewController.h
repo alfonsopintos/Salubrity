@@ -13,5 +13,12 @@
 
     @property(weak, nonatomic) IBOutlet UIButton *submitButton;
     @property(nonatomic) NSDictionary *userProfile;
+    @property (weak, nonatomic) IBOutlet UISwitch *hpvSwitch;
+    @property (weak, nonatomic) IBOutlet UISwitch *chlamydiaSwitch;
+    @property (weak, nonatomic) IBOutlet UISwitch *gonorrheaSwitch;
+    @property (weak, nonatomic) IBOutlet UISwitch *hivSwitch;
+    @property (weak, nonatomic) IBOutlet UISwitch *otherSwitch;
+    @property (weak, nonatomic) IBOutlet UISwitch *anonymousSwitch;
+
 
 @end
