@@ -19,6 +19,37 @@ static NSString * const reuseIdentifier = @"dashboardCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self fetchStats];
+}
+
+-(void) fetchStats {
+//    How can i tabulate all the stats then populate each cell
+//    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+//    [query whereKey:@"facebook_id" equalTo:[self.userProfile objectForKey:@"facebook_id"]];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        if (!error) {
+//            // The find succeeded.
+//            NSLog(@"Successfully retrieved %lu duplicate profiles.", (unsigned long)objects.count);
+//            if (objects.count > 0) {
+//                [self performSegueWithIdentifier:@"openDashboard" sender:self];
+//            } else {
+//                [self performSegueWithIdentifier:@"openMyProfile" sender:self];
+//            }
+//        } else {
+//            // Log details of the failure
+//            NSLog(@"Error: %@ %@", error, [error userInfo]);
+//        }
+//    }];
+    
+    /* make the API call */
+    [FBRequestConnection startWithGraphPath:@"/me/friends"
+                          completionHandler:^(
+                                              FBRequestConnection *connection,
+                                              id result,
+                                              NSError *error
+                                              ) {
+                              NSLog(@"%@", result);
+                          }];
 }
 
 #pragma mark <UICollectionViewDataSource>

@@ -29,7 +29,7 @@
 -(void) postToParse {
     PFObject *userObject = [PFObject objectWithClassName:@"User"];
     userObject[@"facebook_id"] = [self.userProfile objectForKey:@"facebook_id"];
-    userObject[@"name"] = [self.userProfile objectForKey:@"first_name"];
+    userObject[@"first_name"] = [self.userProfile objectForKey:@"first_name"];
 
     if ([self.hpvSwitch isOn]) {
         userObject[@"hpv"] = @"true";
@@ -37,10 +37,11 @@
         userObject[@"hpv"] = @"false";
     }
     
+//    changed from chlamydia to herpes - did not change the button naming
     if ([self.chlamydiaSwitch isOn]) {
-        userObject[@"chlamydia"] = @"true";
+        userObject[@"herpes"] = @"true";
     } else {
-        userObject[@"chlamydia"] = @"false";
+        userObject[@"herpes"] = @"false";
     }
     
     if ([self.gonorrheaSwitch isOn]) {
