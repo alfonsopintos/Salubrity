@@ -14,6 +14,11 @@
 		BEB2CF8F1AF5021600900545 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB2CF8E1AF5021600900545 /* Images.xcassets */; };
 		BEB2CF921AF5021600900545 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB2CF901AF5021600900545 /* LaunchScreen.xib */; };
 		BEB2CF9E1AF5021600900545 /* Health_NumbersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2CF9D1AF5021600900545 /* Health_NumbersTests.m */; };
+		BEB2CFA81AF5048800900545 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB2CFA71AF5048800900545 /* FBSDKCoreKit.framework */; };
+		BEB2CFAA1AF50A5F00900545 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB2CFA91AF50A5F00900545 /* FBSDKLoginKit.framework */; };
+		BEB2CFAE1AF50B2B00900545 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB2CFAC1AF50B2B00900545 /* Bolts.framework */; };
+		BEB2CFAF1AF50B2B00900545 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB2CFAD1AF50B2B00900545 /* FacebookSDK.framework */; };
+		BEB2CFB21AF50CC800900545 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2CFB11AF50CC800900545 /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,12 @@
 		BEB2CF971AF5021600900545 /* Health NumbersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Health NumbersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB2CF9C1AF5021600900545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEB2CF9D1AF5021600900545 /* Health_NumbersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Health_NumbersTests.m; sourceTree = "<group>"; };
+		BEB2CFA71AF5048800900545 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		BEB2CFA91AF50A5F00900545 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		BEB2CFAC1AF50B2B00900545 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../../Documents/FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
+		BEB2CFAD1AF50B2B00900545 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		BEB2CFB01AF50CC800900545 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		BEB2CFB11AF50CC800900545 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB2CFAE1AF50B2B00900545 /* Bolts.framework in Frameworks */,
+				BEB2CFAF1AF50B2B00900545 /* FacebookSDK.framework in Frameworks */,
+				BEB2CFAA1AF50A5F00900545 /* FBSDKLoginKit.framework in Frameworks */,
+				BEB2CFA81AF5048800900545 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 		BEB2CF751AF5021600900545 = {
 			isa = PBXGroup;
 			children = (
+				BEB2CFAB1AF50A6600900545 /* Frameworks */,
 				BEB2CF801AF5021600900545 /* Health Numbers */,
 				BEB2CF9A1AF5021600900545 /* Health NumbersTests */,
 				BEB2CF7F1AF5021600900545 /* Products */,
@@ -86,6 +102,8 @@
 				BEB2CF881AF5021600900545 /* ViewController.h */,
 				BEB2CF891AF5021600900545 /* ViewController.m */,
 				BEB2CF8B1AF5021600900545 /* Main.storyboard */,
+				BEB2CFB01AF50CC800900545 /* ProfileViewController.h */,
+				BEB2CFB11AF50CC800900545 /* ProfileViewController.m */,
 				BEB2CF8E1AF5021600900545 /* Images.xcassets */,
 				BEB2CF901AF5021600900545 /* LaunchScreen.xib */,
 				BEB2CF811AF5021600900545 /* Supporting Files */,
@@ -117,6 +135,17 @@
 				BEB2CF9C1AF5021600900545 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEB2CFAB1AF50A6600900545 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEB2CFAC1AF50B2B00900545 /* Bolts.framework */,
+				BEB2CFAD1AF50B2B00900545 /* FacebookSDK.framework */,
+				BEB2CFA91AF50A5F00900545 /* FBSDKLoginKit.framework */,
+				BEB2CFA71AF5048800900545 /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +250,7 @@
 			files = (
 				BEB2CF8A1AF5021600900545 /* ViewController.m in Sources */,
 				BEB2CF871AF5021600900545 /* AppDelegate.m in Sources */,
+				BEB2CFB21AF50CC800900545 /* ProfileViewController.m in Sources */,
 				BEB2CF841AF5021600900545 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +377,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/alfonsopintos/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Health Numbers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +391,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/alfonsopintos/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Health Numbers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

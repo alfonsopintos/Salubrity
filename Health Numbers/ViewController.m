@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
@@ -16,12 +17,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self facebookAuthentication];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void) facebookAuthentication {
+    // Facebook Login
+    FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:
+                              @[@"public_profile", @"email", @"user_friends"]];
+    
+    loginView.center = self.view.center;
+    loginView.delegate = self;
+    [self.view addSubview:loginView];
 }
+
+- (void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
+//    ProfileViewController *pvc = [[ProfileViewController alloc] init];
+//    [self presentModalViewController:pvc animated:YES];
+
+    [self performSegueWithIdentifier:@"openMyProfile" sender:self];
+}
+
+- (void) loginViewShowingLoggedInUser:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
+    NSLog(@"user signed in");
+}
+
 
 @end
