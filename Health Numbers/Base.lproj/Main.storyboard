@@ -20,6 +20,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="F84-Oo-TlK" kind="show" identifier="openMyProfile" id="3u5-CB-MTr"/>
+                        <segue destination="sS6-sh-zKJ" kind="show" identifier="openDashboard" id="s6b-Jp-FDY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -127,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TY6-88-q7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760.5" y="-158.5"/>
+            <point key="canvasLocation" x="960.5" y="-338.5"/>
         </scene>
         <!--Feed-->
         <scene sceneID="euC-ZO-0ey">
@@ -249,7 +250,7 @@
         <!--Dashboard-->
         <scene sceneID="9Ce-PZ-Qfs">
             <objects>
-                <viewController id="M7R-H1-VEE" sceneMemberID="viewController">
+                <viewController id="M7R-H1-VEE" customClass="DashboardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oag-Xo-L1e"/>
                         <viewControllerLayoutGuide type="bottom" id="xLa-n3-ZFs"/>
@@ -295,4 +296,7 @@
             <point key="canvasLocation" x="1664" y="34"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="s6b-Jp-FDY"/>
+    </inferredMetricsTieBreakers>
 </document>

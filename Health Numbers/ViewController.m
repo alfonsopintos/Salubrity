@@ -32,13 +32,34 @@
 }
 
 - (void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
-//   open my profile if user fb info recieved
-//    place if/else block here, query parse for facebook_id, if the same, skip segue, otherwise segue to show profile
     self.userProfile = @{
                          @"first_name":[user objectForKey:@"first_name"],
                          @"facebook_id":[user objectForKey:@"id"]
                          };
-    [self performSegueWithIdentifier:@"openMyProfile" sender:self];
+    
+    [self checkForDuplicateRecord];
+    
+}
+
+
+-(void) checkForDuplicateRecord {
+    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    [query whereKey:@"facebook_id" equalTo:[self.userProfile objectForKey:@"facebook_id"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu duplicate profiles.", (unsigned long)objects.count);
+            if (objects.count > 0) {
+                [self performSegueWithIdentifier:@"openDashboard" sender:self];
+            } else {
+                [self performSegueWithIdentifier:@"openMyProfile" sender:self];
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
 }
 
 
@@ -49,7 +70,8 @@
         // Get destination view
         ProfileViewController *vc = [segue destinationViewController];
         vc.userProfile = self.userProfile;
-        
+    } else if ([[segue identifier] isEqualToString:@"openDashboard"]) {
+        DashboardViewController *dvc = [segue destinationViewController];
     }
 }
 

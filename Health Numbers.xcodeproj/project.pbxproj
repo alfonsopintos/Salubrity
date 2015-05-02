@@ -31,6 +31,7 @@
 		BEFD3BFC1AF5308000167882 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFD3BFB1AF5308000167882 /* SystemConfiguration.framework */; };
 		BEFD3BFE1AF5308A00167882 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFD3BFD1AF5308A00167882 /* libz.dylib */; };
 		BEFD3C001AF5309500167882 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFD3BFF1AF5309500167882 /* libsqlite3.dylib */; };
+		BEFD3C031AF54FC400167882 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFD3C021AF54FC400167882 /* DashboardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		BEFD3BFB1AF5308000167882 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BEFD3BFD1AF5308A00167882 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BEFD3BFF1AF5309500167882 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		BEFD3C011AF54FC400167882 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
+		BEFD3C021AF54FC400167882 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				BEB2CF861AF5021600900545 /* AppDelegate.m */,
 				BEB2CF881AF5021600900545 /* ViewController.h */,
 				BEB2CF891AF5021600900545 /* ViewController.m */,
+				BEFD3C011AF54FC400167882 /* DashboardViewController.h */,
+				BEFD3C021AF54FC400167882 /* DashboardViewController.m */,
 				BEB2CF8B1AF5021600900545 /* Main.storyboard */,
 				BEB2CFB01AF50CC800900545 /* ProfileViewController.h */,
 				BEB2CFB11AF50CC800900545 /* ProfileViewController.m */,
@@ -296,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFD3C031AF54FC400167882 /* DashboardViewController.m in Sources */,
 				BEB2CF8A1AF5021600900545 /* ViewController.m in Sources */,
 				BEB2CF871AF5021600900545 /* AppDelegate.m in Sources */,
 				BEB2CFB21AF50CC800900545 /* ProfileViewController.m in Sources */,
