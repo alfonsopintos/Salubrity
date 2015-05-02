@@ -32,7 +32,6 @@
 }
 
 - (void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
-    NSLog(@"%@", user);
     self.userProfile = @{
                          @"first_name":[user objectForKey:@"first_name"],
                          @"facebook_id":[user objectForKey:@"id"]
