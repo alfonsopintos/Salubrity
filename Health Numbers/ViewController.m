@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 
-
 @interface ViewController ()
     @property(nonatomic) NSDictionary *userProfile;
 @end
@@ -18,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self facebookAuthentication];
-
 }
 
 -(void) facebookAuthentication {
@@ -27,9 +25,6 @@
                               @[@"public_profile", @"email", @"user_friends"]];
     
     loginView.center = self.view.center;
-    
-
-    
     loginView.delegate = self;
     [self.view addSubview:loginView];
 }
@@ -51,8 +46,10 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             if (objects.count > 0) {
+//                if an account found, direct to user dashboard
                 [self performSegueWithIdentifier:@"openDashboard" sender:self];
             } else {
+//                if no user found, open profile registration page
                 [self performSegueWithIdentifier:@"openMyProfile" sender:self];
             }
         } else {
