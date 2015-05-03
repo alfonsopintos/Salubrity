@@ -21,7 +21,7 @@
 
     @property (nonatomic) NSMutableArray *stringCountArray;
 @end
-//post from here to ME
+
 @implementation DashboardCollectionViewController
 
 static NSString * const reuseIdentifier = @"dashboardCell";
@@ -114,6 +114,7 @@ static NSString * const reuseIdentifier = @"dashboardCell";
                                   }
                               }];
                           }];
+    [self.dashboardCollectionView reloadData];
 }
 
 

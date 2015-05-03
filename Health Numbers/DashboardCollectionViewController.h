@@ -14,4 +14,5 @@
 
 @interface DashboardCollectionViewController : UICollectionViewController
     @property (strong, nonatomic) IBOutlet UICollectionView *dashboardCollectionView;
+    @property (nonatomic, retain) UIRefreshControl *refreshControl;
 @end

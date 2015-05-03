@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE42D6131AF61B97000BBAEB /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE42D6121AF61B97000BBAEB /* FeedTableViewController.m */; };
 		BEB2CF841AF5021600900545 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2CF831AF5021600900545 /* main.m */; };
 		BEB2CF871AF5021600900545 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2CF861AF5021600900545 /* AppDelegate.m */; };
 		BEB2CF8A1AF5021600900545 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2CF891AF5021600900545 /* ViewController.m */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE42D6111AF61B97000BBAEB /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
+		BE42D6121AF61B97000BBAEB /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		BEB2CF7E1AF5021600900545 /* Health Numbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Numbers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB2CF821AF5021600900545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEB2CF831AF5021600900545 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 			children = (
 				BEFD3C041AF55F5100167882 /* DashboardCollectionViewController.h */,
 				BEFD3C051AF55F5100167882 /* DashboardCollectionViewController.m */,
+				BE42D6111AF61B97000BBAEB /* FeedTableViewController.h */,
+				BE42D6121AF61B97000BBAEB /* FeedTableViewController.m */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 				BEB2CF8A1AF5021600900545 /* ViewController.m in Sources */,
 				BEFD3C091AF5676500167882 /* DashboardCollectionViewCell.m in Sources */,
 				BEB2CF871AF5021600900545 /* AppDelegate.m in Sources */,
+				BE42D6131AF61B97000BBAEB /* FeedTableViewController.m in Sources */,
 				BEFD3C061AF55F5100167882 /* DashboardCollectionViewController.m in Sources */,
 				BEB2CFB21AF50CC800900545 /* ProfileViewController.m in Sources */,
 				BEB2CF841AF5021600900545 /* main.m in Sources */,

@@ -26,7 +26,6 @@
 
 
 -(void) fetchUserData {
-    
     [FBRequestConnection startWithGraphPath:@"/me"
                           completionHandler:^(
                                               FBRequestConnection *connection,
