@@ -102,7 +102,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSJ-9R-WjH">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GSJ-9R-WjH">
                                 <rect key="frame" x="163" y="496" width="51" height="31"/>
                                 <color key="onTintColor" red="0.29411764705882354" green="0.77254901960784317" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
@@ -158,7 +158,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" id="BYx-4D-AmW"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="Feed" id="BYx-4D-AmW"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pd-IU-Pfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -247,31 +247,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ME" id="Ulv-EK-gSo"/>
+                    <tabBarItem key="tabBarItem" title="ME" image="me" id="Ulv-EK-gSo"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWk-bj-unD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2498.5" y="1359.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="V83-Qs-67O">
-            <objects>
-                <viewController id="9YL-Ae-RAY" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ick-PQ-jlp"/>
-                        <viewControllerLayoutGuide type="bottom" id="fXj-N8-6rP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AWY-v5-Rzy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VVI-u7-hwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2487.5" y="-1124.5"/>
         </scene>
         <!--Dashboard Collection View-->
         <scene sceneID="9Ce-PZ-Qfs">
@@ -296,14 +277,20 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycd-tf-TN0">
-                                            <rect key="frame" x="58" y="42" width="70" height="35"/>
+                                            <rect key="frame" x="58" y="37" width="70" height="35"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HPV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTs-6X-SDJ">
-                                            <rect key="frame" x="8" y="96" width="170" height="35"/>
+                                            <rect key="frame" x="8" y="113" width="170" height="35"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="report having" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ora-Pm-55s">
+                                            <rect key="frame" x="8" y="66" width="170" height="53"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -326,7 +313,7 @@
                             <outlet property="delegate" destination="M7R-H1-VEE" id="5de-8H-LqN"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="Uhd-ej-kjv"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="Dashboard" id="Uhd-ej-kjv"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="dashboardCollectionView" destination="TgZ-AY-WiH" id="u9K-1O-6jP"/>
@@ -357,7 +344,12 @@
             <point key="canvasLocation" x="1664" y="34"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Dashboard" width="32" height="32"/>
+        <image name="Feed" width="32" height="32"/>
+        <image name="me" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="s6b-Jp-FDY"/>
+        <segue reference="AbY-Uz-3uK"/>
     </inferredMetricsTieBreakers>
 </document>

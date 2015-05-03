@@ -63,9 +63,9 @@
     }
     
     if ([self.anonymousSwitch isOn]) {
-        userObject[@"anonymous"] = @"true";
-    } else {
         userObject[@"anonymous"] = @"false";
+    } else {
+        userObject[@"anonymous"] = @"true";
     }
     
     [userObject saveInBackground];
@@ -74,8 +74,6 @@
 - (void)stateChanged:(UISwitch *)switchState
 {
     if ([switchState isOn]) {
-        NSLog(@"going anonymous");
-    } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Going Public"
                                                         message:@"Be aware by toggling this button you are choosing to publicily display your information."
                                                        delegate:self
