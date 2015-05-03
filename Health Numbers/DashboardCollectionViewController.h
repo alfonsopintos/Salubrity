@@ -10,6 +10,7 @@
 #import "DashboardCollectionViewCell.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "ProfileViewController.h"
+#import <Parse/Parse.h>
 
 @interface DashboardCollectionViewController : UICollectionViewController
     @property (strong, nonatomic) IBOutlet UICollectionView *dashboardCollectionView;

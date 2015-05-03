@@ -18,6 +18,8 @@
     @property (nonatomic) NSMutableArray *hpvArray;
     @property (nonatomic) NSMutableArray *chlamydiaArray;
     @property (nonatomic) NSMutableArray *otherArray;
+
+    @property (nonatomic) NSMutableArray *stringCountArray;
 @end
 
 @implementation DashboardCollectionViewController
@@ -28,8 +30,13 @@ static NSString * const reuseIdentifier = @"dashboardCell";
     [super viewDidLoad];
     [self initArrays];
     [self fetchUserFriends];
+    [self.dashboardCollectionView reloadData];
 }
 
+-(void) viewDidAppear:(BOOL)animated {
+    [self makeCountArray];
+    [self.dashboardCollectionView reloadData];
+}
 
 -(void) initArrays {
     self.hivArray = [[NSMutableArray alloc] init];
@@ -39,6 +46,18 @@ static NSString * const reuseIdentifier = @"dashboardCell";
     self.chlamydiaArray = [[NSMutableArray alloc] init];
     self.otherArray = [[NSMutableArray alloc] init];
 }
+
+-(void) makeCountArray {
+    self.stringCountArray = [[NSMutableArray alloc] init];
+    [self.stringCountArray addObject:[NSString stringWithFormat:@"%lu", (unsigned long)[self.hivArray count]]];
+    [self.stringCountArray addObject:[NSString stringWithFormat:@"%lu", (unsigned long)[self.herpesArray count]]];
+    [self.stringCountArray addObject:[NSString stringWithFormat:@"%lu", (unsigned long)[self.chlamydiaArray count]]];
+    [self.stringCountArray addObject:[NSString stringWithFormat:@"%lu", (unsigned long)[self.gonorrheaArray count]]];
+    [self.stringCountArray addObject:[NSString stringWithFormat:@"%lu", (unsigned long)[self.hpvArray count]]];
+    [self.stringCountArray addObject:[NSString stringWithFormat:@"%lu", (unsigned long)[self.otherArray count]]];
+     NSLog(@"count array = %@", self.stringCountArray);
+}
+
 
 -(void) fetchUserFriends {
     [FBRequestConnection startWithGraphPath:@"/me/friends"
@@ -89,13 +108,33 @@ static NSString * const reuseIdentifier = @"dashboardCell";
                                           }
                                           
                                       }
+                                      
+//                                    [self postCounterToParse];
                                   } else {
                                       NSLog(@"Error: %@ %@", error, [error userInfo]);
                                   }
                               }];
-                            
                           }];
 }
+
+
+
+//-(void) postCounterToParse {
+//    PFObject *counterObject = [PFObject objectWithClassName:@"Counter"];
+//    
+//    counterObject[@"hiv_count"] = [NSString stringWithFormat:@"%lu", (unsigned long)[self.hivArray count]];
+//    counterObject[@"hpv_count"] = [NSString stringWithFormat:@"%lu", (unsigned long)[self.hpvArray count]];
+//    counterObject[@"herpes_count"] = [NSString stringWithFormat:@"%lu", (unsigned long)[self.herpesArray count]];
+//    counterObject[@"chlamydia_count"] = [NSString stringWithFormat:@"%lu", (unsigned long)[self.chlamydiaArray count]];
+//    counterObject[@"gonorrhea_count"] = [NSString stringWithFormat:@"%lu", (unsigned long)[self.gonorrheaArray count]];
+//    counterObject[@"other_count"] = [NSString stringWithFormat:@"%lu", (unsigned long)[self.otherArray count]];
+//    
+//    [counterObject saveInBackground];
+//}
+
+
+
+
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -105,13 +144,19 @@ static NSString * const reuseIdentifier = @"dashboardCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 8;
+    return 6;
 }
 
 - (DashboardCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSMutableArray *cellTitles = [[NSMutableArray alloc] initWithObjects:@"HIV", @"Herpes", @"Chlamydia", @"Gonorrhea", @"HPV", @"Other", nil];
+    
     DashboardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.cellNumberLabel.text = @"10";
-    cell.cellTextLabel.text = @"HIV";
+
+    NSLog(@" setting up cell");
+    cell.cellNumberLabel.text = [self.stringCountArray objectAtIndex:indexPath.row];
+    
+    
+    cell.cellTextLabel.text = [cellTitles objectAtIndex:indexPath.row];
     return cell;
 }
 
