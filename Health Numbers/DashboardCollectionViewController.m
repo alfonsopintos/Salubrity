@@ -10,6 +10,14 @@
 
 @interface DashboardCollectionViewController ()
     @property (nonatomic) NSMutableArray *facebookIdArray;
+    @property (nonatomic) NSMutableArray *parseIdArray;
+
+    @property (nonatomic) NSMutableArray *hivArray;
+    @property (nonatomic) NSMutableArray *herpesArray;
+    @property (nonatomic) NSMutableArray *gonorrheaArray;
+    @property (nonatomic) NSMutableArray *hpvArray;
+    @property (nonatomic) NSMutableArray *chlamydiaArray;
+    @property (nonatomic) NSMutableArray *otherArray;
 @end
 
 @implementation DashboardCollectionViewController
@@ -18,8 +26,18 @@ static NSString * const reuseIdentifier = @"dashboardCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self initArrays];
     [self fetchUserFriends];
+}
+
+
+-(void) initArrays {
+    self.hivArray = [[NSMutableArray alloc] init];
+    self.herpesArray = [[NSMutableArray alloc] init];
+    self.gonorrheaArray = [[NSMutableArray alloc] init];
+    self.hpvArray = [[NSMutableArray alloc] init];
+    self.chlamydiaArray = [[NSMutableArray alloc] init];
+    self.otherArray = [[NSMutableArray alloc] init];
 }
 
 -(void) fetchUserFriends {
@@ -32,14 +50,50 @@ static NSString * const reuseIdentifier = @"dashboardCell";
 //                              result is a hash of my friends who use the app
                               result = [result objectForKey:@"data"];
 
-                              
                               self.facebookIdArray = [[NSMutableArray alloc] init];
-                              
                               for (id friend in result) {
                                 [self.facebookIdArray addObject:[friend objectForKey:@"id"]];
                               }
-//                              returns array of friends user_ids
-                              NSLog(@"%@", self.facebookIdArray);
+                              
+                              NSArray *parseQuery = [[NSArray alloc] init];
+                              parseQuery = self.facebookIdArray;
+                              PFQuery *query = [PFQuery queryWithClassName:@"User"];
+                              [query whereKey:@"facebook_id" containedIn:parseQuery];
+                              
+                              [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                                  if (!error) {
+                                      for (id friend in objects) {
+//                                         hiv
+                                          if ([[friend objectForKey:@"hiv"] isEqualToString:@"true"]) {
+                                              [self.hivArray addObject:[friend objectForKey:@"hiv"]];
+                                          }
+//                                          herpes
+                                          if ([[friend objectForKey:@"herpes"] isEqualToString:@"true"]) {
+                                              [self.herpesArray addObject:[friend objectForKey:@"herpes"]];
+                                          }
+//                                          hpv
+                                          if ([[friend objectForKey:@"hpv"] isEqualToString:@"true"]) {
+                                              [self.hpvArray addObject:[friend objectForKey:@"hpv"]];
+                                          }
+//                                          chlamydia
+                                          if ([[friend objectForKey:@"chlamydia"] isEqualToString:@"true"]) {
+                                              [self.chlamydiaArray addObject:[friend objectForKey:@"chlamydia"]];
+                                          }
+//                                          gonorrhea
+                                          if ([[friend objectForKey:@"gonorrhea"] isEqualToString:@"true"]) {
+                                              [self.gonorrheaArray addObject:[friend objectForKey:@"gonorrhea"]];
+                                          }
+//                                          other
+                                          if ([[friend objectForKey:@"other"] isEqualToString:@"true"]) {
+                                              [self.otherArray addObject:[friend objectForKey:@"other"]];
+                                          }
+                                          
+                                      }
+                                  } else {
+                                      NSLog(@"Error: %@ %@", error, [error userInfo]);
+                                  }
+                              }];
+                            
                           }];
 }
 

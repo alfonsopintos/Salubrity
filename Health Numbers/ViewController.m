@@ -47,8 +47,6 @@
     [query whereKey:@"facebook_id" equalTo:[self.userProfile objectForKey:@"facebook_id"]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %lu duplicate profiles.", (unsigned long)objects.count);
             if (objects.count > 0) {
                 [self performSegueWithIdentifier:@"openDashboard" sender:self];
             } else {
