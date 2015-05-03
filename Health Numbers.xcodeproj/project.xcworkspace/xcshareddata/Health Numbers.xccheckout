@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>8070446D-B16A-49FD-B57D-0014680278C9</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Health Numbers</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3BDF9A76B7E4BF18A0EC35EDD6AC0C26B3CF7CDC</key>
 		<string>github.com:alfonsopintos/Salubrity.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Health Numbers.xcodeproj/project.xcworkspace</string>
+	<string>Health Numbers.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3BDF9A76B7E4BF18A0EC35EDD6AC0C26B3CF7CDC</key>
