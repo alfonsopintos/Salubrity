@@ -9,7 +9,7 @@
 #import "ProfileViewController.h"
 
 @interface ProfileViewController ()
-
+    @property (nonatomic) PFObject *userProfileObject;
 @end
 
 @implementation ProfileViewController
@@ -19,25 +19,68 @@
     [self.anonymousSwitch addTarget:self
                       action:@selector(stateChanged:) forControlEvents:UIControlEventValueChanged];
     
-//    if ([self.title isEqual: @"ME"]) {
-//        [self fetchUserData];
-//    }
+    if ([self.title isEqual: @"ME"]) {
+        [self fetchUserData];
+    }
 }
 
 
 -(void) fetchUserData {
-    PFQuery *query = [PFQuery queryWithClassName:@"User"];
-    [query whereKey:@"facebook_id" equalTo:[self.userProfile objectForKey:@"facebook_id"]];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %@.", objects);
-            // Do something with the found object        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
+    
+    [FBRequestConnection startWithGraphPath:@"/me"
+                          completionHandler:^(
+                                              FBRequestConnection *connection,
+                                              id result,
+                                              NSError *error
+                                              ) {
+                              self.userProfile = result;
+                              
+                              PFQuery *query = [PFQuery queryWithClassName:@"User"];
+
+                              [query whereKey:@"facebook_id" equalTo:[self.userProfile objectForKey:@"id"]];
+                              [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                                  if (!error) {
+                                      // The find succeeded.
+                                      // Do something with the found objects
+                                      self.userProfileObject = [objects firstObject];
+                                      [self setupSwitches];
+                                  } else {
+                                      // Log details of the failure
+                                      NSLog(@"Error: %@ %@", error, [error userInfo]);
+                                  }
+                              }];
+                              
+                              
+                          }];
+
+    
 }
+
+-(void) setupSwitches {
+    NSLog(@"%@", self.userProfileObject);
+    if ([[self.userProfileObject objectForKey:@"hpv"] isEqualToString:@"true"]) {
+        [self.hpvSwitch setOn:YES animated:YES];
+    }
+    
+//    previous mixup with naming stuck through
+    if ([[self.userProfileObject objectForKey:@"herpes"] isEqualToString:@"true"]) {
+        [self.chlamydiaSwitch setOn:YES animated:YES];
+    }
+    
+    if ([[self.userProfileObject objectForKey:@"gonorrhea"] isEqualToString:@"true"]) {
+        [self.gonorrheaSwitch setOn:YES animated:YES];
+    }
+    
+    if ([[self.userProfileObject objectForKey:@"hiv"] isEqualToString:@"true"]) {
+        [self.hivSwitch setOn:YES animated:YES];
+    }
+    
+    if ([[self.userProfileObject objectForKey:@"other"] isEqualToString:@"true"]) {
+        [self.otherSwitch setOn:YES animated:YES];
+    }
+    
+}
+
 
 - (IBAction)submitButtonPress:(id)sender {
     [self postToParse];

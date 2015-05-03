@@ -327,6 +327,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="ME" image="me" id="Ulv-EK-gSo"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="anonymousSwitch" destination="t0B-OV-v2A" id="qjT-xv-gFq"/>
+                        <outlet property="chlamydiaSwitch" destination="oco-W6-lK2" id="3Eb-j1-h84"/>
+                        <outlet property="gonorrheaSwitch" destination="atR-fT-WRx" id="sYP-0E-NUo"/>
+                        <outlet property="hivSwitch" destination="tlX-aG-EnH" id="mm4-6j-lFH"/>
+                        <outlet property="hpvSwitch" destination="6Lt-YF-PAY" id="uJB-oy-SM4"/>
+                        <outlet property="otherSwitch" destination="0Ov-9Y-P6O" id="kgp-BH-ajN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWk-bj-unD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -383,7 +391,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NKF-XF-gIS">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>
                         <connections>
