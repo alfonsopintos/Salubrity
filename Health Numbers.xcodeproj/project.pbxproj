@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE42D6131AF61B97000BBAEB /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE42D6121AF61B97000BBAEB /* FeedTableViewController.m */; };
+		BE6E1C101AF628B20035D8A5 /* AppleWatchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6E1C0F1AF628B20035D8A5 /* AppleWatchStoryboard.storyboard */; };
 		BEB2CF841AF5021600900545 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2CF831AF5021600900545 /* main.m */; };
 		BEB2CF871AF5021600900545 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2CF861AF5021600900545 /* AppDelegate.m */; };
 		BEB2CF8A1AF5021600900545 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2CF891AF5021600900545 /* ViewController.m */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		BE42D6111AF61B97000BBAEB /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		BE42D6121AF61B97000BBAEB /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
+		BE6E1C0F1AF628B20035D8A5 /* AppleWatchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppleWatchStoryboard.storyboard; sourceTree = "<group>"; };
 		BEB2CF7E1AF5021600900545 /* Health Numbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Numbers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB2CF821AF5021600900545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEB2CF831AF5021600900545 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				BEB2CF8B1AF5021600900545 /* Main.storyboard */,
+				BE6E1C0F1AF628B20035D8A5 /* AppleWatchStoryboard.storyboard */,
 				BEFD3C0A1AF56E2B00167882 /* Views */,
 				BEB2CF851AF5021600900545 /* AppDelegate.h */,
 				BEB2CF861AF5021600900545 /* AppDelegate.m */,
@@ -323,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6E1C101AF628B20035D8A5 /* AppleWatchStoryboard.storyboard in Resources */,
 				BEB2CF8D1AF5021600900545 /* Main.storyboard in Resources */,
 				BEB2CF921AF5021600900545 /* LaunchScreen.xib in Resources */,
 				BEB2CF8F1AF5021600900545 /* Images.xcassets in Resources */,
