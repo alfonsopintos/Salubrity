@@ -33,7 +33,6 @@
 		BEFD3C001AF5309500167882 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFD3BFF1AF5309500167882 /* libsqlite3.dylib */; };
 		BEFD3C061AF55F5100167882 /* DashboardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFD3C051AF55F5100167882 /* DashboardCollectionViewController.m */; };
 		BEFD3C091AF5676500167882 /* DashboardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFD3C081AF5676500167882 /* DashboardCollectionViewCell.m */; };
-		BEFD3C0E1AF5EE7800167882 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFD3C0D1AF5EE7800167882 /* MeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,8 +81,6 @@
 		BEFD3C051AF55F5100167882 /* DashboardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardCollectionViewController.m; sourceTree = "<group>"; };
 		BEFD3C071AF5676500167882 /* DashboardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardCollectionViewCell.h; sourceTree = "<group>"; };
 		BEFD3C081AF5676500167882 /* DashboardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardCollectionViewCell.m; sourceTree = "<group>"; };
-		BEFD3C0C1AF5EE7800167882 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
-		BEFD3C0D1AF5EE7800167882 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,8 +234,6 @@
 			children = (
 				BEFD3C041AF55F5100167882 /* DashboardCollectionViewController.h */,
 				BEFD3C051AF55F5100167882 /* DashboardCollectionViewController.m */,
-				BEFD3C0C1AF5EE7800167882 /* MeViewController.h */,
-				BEFD3C0D1AF5EE7800167882 /* MeViewController.m */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -345,7 +340,6 @@
 			files = (
 				BEB2CF8A1AF5021600900545 /* ViewController.m in Sources */,
 				BEFD3C091AF5676500167882 /* DashboardCollectionViewCell.m in Sources */,
-				BEFD3C0E1AF5EE7800167882 /* MeViewController.m in Sources */,
 				BEB2CF871AF5021600900545 /* AppDelegate.m in Sources */,
 				BEFD3C061AF55F5100167882 /* DashboardCollectionViewController.m in Sources */,
 				BEB2CFB21AF50CC800900545 /* ProfileViewController.m in Sources */,

@@ -10,14 +10,22 @@
 
 @interface ViewController ()
     @property(nonatomic) NSDictionary *userProfile;
+    @property(nonatomic) FBLoginView *loginview;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self facebookAuthentication];
+    
+    if ([self.title  isEqual: @"ME"]) {
+    } else {
+        [self facebookAuthentication];
+    }
 }
+
+
+#pragma intro screen and facebook
 
 -(void) facebookAuthentication {
     // Facebook Login
@@ -34,9 +42,7 @@
                          @"first_name":[user objectForKey:@"first_name"],
                          @"facebook_id":[user objectForKey:@"id"]
                          };
-    
     [self checkForDuplicateRecord];
-    
 }
 
 
@@ -60,7 +66,6 @@
     
 }
 
-
 // This will get called as well before the view appears
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -72,7 +77,6 @@
         DashboardCollectionViewController *dvc = [segue destinationViewController];
     }
 }
-
 
 - (void) loginViewShowingLoggedInUser:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
 }

@@ -10,7 +10,6 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "ProfileViewController.h"
 #import "DashboardCollectionViewController.h"
-#import "MeViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
