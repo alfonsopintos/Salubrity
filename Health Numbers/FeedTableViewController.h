@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DashboardCollectionViewCell.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import "ProfileViewController.h"
+#import <Parse/Parse.h>
 
-@interface FeedTableViewController : UITableViewController
+@interface FeedTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate >
 
+    @property(nonatomic) UITableView *feedTableView;
 @end
