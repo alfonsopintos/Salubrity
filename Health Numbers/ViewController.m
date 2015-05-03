@@ -27,6 +27,9 @@
                               @[@"public_profile", @"email", @"user_friends"]];
     
     loginView.center = self.view.center;
+    
+
+    
     loginView.delegate = self;
     [self.view addSubview:loginView];
 }
