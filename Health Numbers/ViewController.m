@@ -17,11 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    if ([self.title  isEqual: @"ME"]) {
-    } else {
-        [self facebookAuthentication];
-    }
 }
 
 

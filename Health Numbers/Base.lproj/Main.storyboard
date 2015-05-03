@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="348.5" y="347.5"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Intro-->
         <scene sceneID="9MK-uW-v6h">
             <objects>
-                <viewController id="F84-Oo-TlK" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController title="Intro" id="F84-Oo-TlK" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wgS-qX-vGe"/>
                         <viewControllerLayoutGuide type="bottom" id="gG2-pg-u2v"/>

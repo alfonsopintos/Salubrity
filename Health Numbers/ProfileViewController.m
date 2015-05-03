@@ -18,8 +18,26 @@
     [super viewDidLoad];
     [self.anonymousSwitch addTarget:self
                       action:@selector(stateChanged:) forControlEvents:UIControlEventValueChanged];
+    
+//    if ([self.title isEqual: @"ME"]) {
+//        [self fetchUserData];
+//    }
 }
 
+
+-(void) fetchUserData {
+    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    [query whereKey:@"facebook_id" equalTo:[self.userProfile objectForKey:@"facebook_id"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %@.", objects);
+            // Do something with the found object        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+}
 
 - (IBAction)submitButtonPress:(id)sender {
     [self postToParse];
