@@ -47,6 +47,7 @@ static NSString * const reuseIdentifier = @"dashboardCell";
     self.otherArray = [[NSMutableArray alloc] init];
 }
 
+
 -(void) makeCountArray {
     self.stringCountArray = [[NSMutableArray alloc] init];
     [self.stringCountArray addObject:[NSString stringWithFormat:@"%lu", (unsigned long)[self.hivArray count]]];

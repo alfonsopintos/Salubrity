@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+
 #import "DashboardCollectionViewCell.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "ProfileViewController.h"

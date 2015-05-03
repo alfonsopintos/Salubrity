@@ -9,15 +9,38 @@
 #import "FeedTableViewController.h"
 
 @interface FeedTableViewController ()
-
+    @property (nonatomic) NSArray *feedResponseArray;
 @end
 
 @implementation FeedTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self fetchFeed];
+    [self.tableView reloadData];
 }
+
+
+
+- (void) fetchFeed {
+    NSURLRequest * urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://afternoon-scrubland-8787.herokuapp.com/comments.json"]];
+    NSURLResponse * response = nil;
+    NSError * error = nil;
+    NSData * data = [NSURLConnection sendSynchronousRequest:urlRequest
+                                          returningResponse:&response
+                                                      error:&error];
+    
+    if (error == nil)
+    {
+        self.feedResponseArray = [[NSArray alloc] init];
+        NSError *e = nil;
+        NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingMutableContainers error: &e];
+        self.feedResponseArray = jsonArray;
+        [self.tableView reloadData];
+    }
+
+}
+
 
 #pragma mark - Table view data source
 
@@ -27,8 +50,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return 10;
+    return 7;
 }
 
 
@@ -38,8 +60,9 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIndentifier];
     }
-    cell.detailTextLabel.text = @"testing detail text label";
-    cell.textLabel.text = @"testing textlabel text";
+    cell.detailTextLabel.text = [[self.feedResponseArray objectAtIndex:indexPath.row] objectForKey:@"author"];
+    cell.textLabel.text = [[self.feedResponseArray objectAtIndex:indexPath.row] objectForKey:@"text"];
+    cell.tag = (indexPath.row - 1);
     return cell;
 }
 

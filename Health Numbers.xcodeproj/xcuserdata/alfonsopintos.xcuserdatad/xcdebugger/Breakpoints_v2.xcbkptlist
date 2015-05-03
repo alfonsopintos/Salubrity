@@ -10,13 +10,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Health Numbers/DashboardCollectionViewController.m"
-            timestampString = "452337600.391128"
+            timestampString = "452352243.97194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Health Numbers/FeedTableViewController.h"
+            timestampString = "452352210.853772"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[FeedTableViewController feedTableView]"
+                  moduleName = "Health Numbers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alfonsopintos/Desktop/eMerge%20Hackathon/Health%20Numbers/Health%20Numbers/FeedTableViewController.h"
+                  timestampString = "452352210.936879"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[FeedTableViewController setFeedTableView:]"
+                  moduleName = "Health Numbers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alfonsopintos/Desktop/eMerge%20Hackathon/Health%20Numbers/Health%20Numbers/FeedTableViewController.h"
+                  timestampString = "452352210.937203"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
