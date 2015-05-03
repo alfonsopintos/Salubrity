@@ -55,7 +55,6 @@ static NSString * const reuseIdentifier = @"dashboardCell";
     [self.stringCountArray addObject:[NSString stringWithFormat:@"%lu", (unsigned long)[self.gonorrheaArray count]]];
     [self.stringCountArray addObject:[NSString stringWithFormat:@"%lu", (unsigned long)[self.hpvArray count]]];
     [self.stringCountArray addObject:[NSString stringWithFormat:@"%lu", (unsigned long)[self.otherArray count]]];
-     NSLog(@"count array = %@", self.stringCountArray);
 }
 
 
@@ -152,10 +151,7 @@ static NSString * const reuseIdentifier = @"dashboardCell";
     
     DashboardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
 
-    NSLog(@" setting up cell");
     cell.cellNumberLabel.text = [self.stringCountArray objectAtIndex:indexPath.row];
-    
-    
     cell.cellTextLabel.text = [cellTitles objectAtIndex:indexPath.row];
     return cell;
 }

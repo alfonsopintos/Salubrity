@@ -61,7 +61,7 @@
 }
 
 
-// This will get called too before the view appears
+// This will get called as well before the view appears
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"openMyProfile"]) {
