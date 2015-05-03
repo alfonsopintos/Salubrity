@@ -153,6 +153,28 @@ static NSString * const reuseIdentifier = @"dashboardCell";
 
     cell.cellNumberLabel.text = [self.stringCountArray objectAtIndex:indexPath.row];
     cell.cellTextLabel.text = [cellTitles objectAtIndex:indexPath.row];
+    cell.tag = indexPath.row;
+    
+//    red - [UIColor colorWithRed:0.82 green:0.243 blue:0.149 alpha:1]];
+//    green - [UIColor colorWithRed:0.643 green:0.804 blue:0.224 alpha:1]
+//    blue - [UIColor colorWithRed:0.294 green:0.773 blue:0.929 alpha:1]
+
+
+    
+    if (cell.tag == 0) {
+        [cell setBackgroundColor:[UIColor colorWithRed:0.82 green:0.243 blue:0.149 alpha:1]];
+    } else if (cell.tag == 1) {
+        [cell setBackgroundColor:[UIColor colorWithRed:0.643 green:0.804 blue:0.224 alpha:1]];
+    } else if (cell.tag == 2) {
+        [cell setBackgroundColor:[UIColor colorWithRed:0.294 green:0.773 blue:0.929 alpha:1]];
+    } else if (cell.tag == 3) {
+        [cell setBackgroundColor:[UIColor colorWithRed:0.82 green:0.243 blue:0.149 alpha:1]];
+    } else if (cell.tag == 4) {
+        [cell setBackgroundColor:[UIColor colorWithRed:0.643 green:0.804 blue:0.224 alpha:1]];
+    } else if (cell.tag == 5) {
+        [cell setBackgroundColor:[UIColor colorWithRed:0.294 green:0.773 blue:0.929 alpha:1]];
+    }
+    
     return cell;
 }
 

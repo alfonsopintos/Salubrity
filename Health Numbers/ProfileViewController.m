@@ -57,7 +57,6 @@
 }
 
 -(void) setupSwitches {
-    NSLog(@"%@", self.userProfileObject);
     if ([[self.userProfileObject objectForKey:@"hpv"] isEqualToString:@"true"]) {
         [self.hpvSwitch setOn:YES animated:YES];
     }
@@ -79,6 +78,9 @@
         [self.otherSwitch setOn:YES animated:YES];
     }
     
+    if ([[self.userProfileObject objectForKey:@"anonymous"] isEqualToString:@"false"]) {
+        [self.anonymousSwitch setOn:YES animated:YES];
+    }
 }
 
 
@@ -132,8 +134,7 @@
     [userObject saveInBackground];
 }
 
-- (void)stateChanged:(UISwitch *)switchState
-{
+- (void)stateChanged:(UISwitch *)switchState {
     if ([switchState isOn]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Going Public"
                                                         message:@"Be aware by toggling this button you are choosing to publicily display your information."
