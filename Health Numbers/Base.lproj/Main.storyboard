@@ -69,72 +69,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Health Numbers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StX-TG-idp">
-                                <rect key="frame" x="16" y="28" width="343" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello There!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StX-TG-idp">
+                                <rect key="frame" x="16" y="94" width="343" height="44"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.81960784310000001" green="0.24313725489999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HPV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYC-X1-uba">
-                                <rect key="frame" x="16" y="108" width="174" height="45"/>
+                                <rect key="frame" x="74" y="190" width="100" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Herpes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y58-wE-Afq">
-                                <rect key="frame" x="16" y="161" width="174" height="45"/>
+                                <rect key="frame" x="74" y="243" width="100" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gonorrhea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrd-RW-svZ">
-                                <rect key="frame" x="16" y="214" width="174" height="45"/>
+                                <rect key="frame" x="74" y="296" width="100" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HIV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7d-xw-95v">
-                                <rect key="frame" x="16" y="267" width="174" height="45"/>
+                                <rect key="frame" x="74" y="349" width="100" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWv-Kc-B2F">
-                                <rect key="frame" x="16" y="320" width="174" height="45"/>
+                                <rect key="frame" x="74" y="402" width="100" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NOP-au-Q2P">
-                                <rect key="frame" x="260" y="115" width="51" height="31"/>
-                                <color key="onTintColor" red="0.64313725489999995" green="0.80392156859999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="203" y="197" width="51" height="31"/>
+                                <color key="tintColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="onTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.64313725489999995" green="0.80392156859999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="10S-GF-4WA">
-                                <rect key="frame" x="260" y="168" width="51" height="31"/>
-                                <color key="onTintColor" red="0.64313725489999995" green="0.80392156859999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="203" y="250" width="51" height="31"/>
+                                <color key="tintColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="onTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.64313725489999995" green="0.80392156859999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z6R-Xo-42m">
-                                <rect key="frame" x="260" y="221" width="51" height="31"/>
-                                <color key="onTintColor" red="0.64313725489999995" green="0.80392156859999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="203" y="303" width="51" height="31"/>
+                                <color key="tintColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="onTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.64313725489999995" green="0.80392156859999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ljp-xV-lky">
-                                <rect key="frame" x="260" y="274" width="51" height="31"/>
-                                <color key="onTintColor" red="0.64313725489999995" green="0.80392156859999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="203" y="356" width="51" height="31"/>
+                                <color key="tintColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="onTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.64313725489999995" green="0.80392156859999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uUL-xJ-kec">
-                                <rect key="frame" x="260" y="327" width="51" height="31"/>
-                                <color key="onTintColor" red="0.64313725489999995" green="0.80392156859999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="203" y="409" width="51" height="31"/>
+                                <color key="tintColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="onTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.64313725489999995" green="0.80392156859999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LTU-En-iEB">
-                                <rect key="frame" x="12" y="388" width="350" height="91"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTU-En-iEB">
+                                <rect key="frame" x="28" y="455" width="320" height="100"/>
+                                <string key="text">It is important to us that you feel safe and comfortable while using Salubility. Please let us know if you want your identity hidden form other users while using this app. You can change this setting at any time in your profile settings.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GSJ-9R-WjH">
-                                <rect key="frame" x="163" y="496" width="51" height="31"/>
-                                <color key="onTintColor" red="0.29411764705882354" green="0.77254901960784317" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="27" y="563" width="51" height="31"/>
+                                <color key="onTintColor" red="0.64313725489999995" green="0.80392156859999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUN-UE-IPg">
                                 <rect key="frame" x="0.0" y="626" width="375" height="41"/>
@@ -149,8 +158,23 @@
                                     <segue destination="sS6-sh-zKJ" kind="show" id="AbY-Uz-3uK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I want to be hidden from other users" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFT-15-gjS">
+                                <rect key="frame" x="108" y="563" width="238" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click on any options you feel comfortable enough to disclose" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y54-LS-gcz">
+                                <rect key="frame" x="27" y="136" width="318" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SideTextLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ox9-5a-ItM">
+                                <rect key="frame" x="108" y="34" width="156" height="40"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -377,10 +401,11 @@
     <resources>
         <image name="Dashboard" width="32" height="32"/>
         <image name="Feed" width="32" height="32"/>
+        <image name="SideTextLogo" width="313" height="80"/>
         <image name="logowithfont" width="833" height="833"/>
         <image name="me" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="s6b-Jp-FDY"/>
+        <segue reference="AbY-Uz-3uK"/>
     </inferredMetricsTieBreakers>
 </document>
